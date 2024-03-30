@@ -107,7 +107,7 @@ function update_distance(position) {
   dist=distance(target_lat, target_long, position.coords.latitude, position.coords.longitude, 'f');
   console.log(target_lat, target_long, position.coords.latitude, position.coords.longitude, 'f', dist.toLocaleString(undefined, {maximumFractionDigits: 0}))
   //dist=3; // DEBUG
-  if (dist<5) {
+  if (dist<15) {
 	document.getElementById('success-image').src = success_image;
 	document.getElementById("distance-feedback").innerHTML = 'TARGET FOUND';
 	found=true;
