@@ -67,8 +67,8 @@ div {
 */
 </style>
 <script>
-target_lat='53.091786';
-target_long='7.406069';
+target_lat='53.106095';
+target_long='7.361718';
 success_image='pumpkin_success.png';
 
 const options = {
@@ -107,9 +107,11 @@ function update_distance(position) {
   dist=distance(target_lat, target_long, position.coords.latitude, position.coords.longitude, 'f');
   console.log(target_lat, target_long, position.coords.latitude, position.coords.longitude, 'f', dist.toLocaleString(undefined, {maximumFractionDigits: 0}))
   //dist=3; // DEBUG
-  if (dist<5) {
+  if (dist<20) {
 	document.getElementById('success-image').src = success_image;
-	document.getElementById("distance-feedback").innerHTML = 'TARGET FOUND';
+	document.getElementById("distance-feedback").innerHTML = 'YIPPIIIIE';
+	<h1>R=1880m</h1>;
+	<a href="https://www.cachesleuth.com/intersection3circles.html">Circle A</a>;
 	found=true;
 	} else {
 		document.getElementById("distance-feedback").innerHTML = ' ' + dist.toLocaleString(undefined, {maximumFractionDigits: 0}) + ' ';
