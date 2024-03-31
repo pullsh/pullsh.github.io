@@ -3,7 +3,7 @@
 <style>
 *{
   box-sizing: border-box;
-  padding: 10px;
+  padding: 0px;
   margin: 0;
 }
 html {
@@ -30,7 +30,7 @@ body {
   grid-column: 1;
   grid-row: 1;
   font-size: 10vw;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
 }
@@ -111,8 +111,7 @@ function update_distance(position) {
 	document.getElementById('success-image').src = success_image;
 	document.getElementById("distance-feedback").innerHTML = 'YIPPIIIIE';
 	found=true;
-	  document.getElementById("distance-feedback").innerHTML += '<br>R=1880';
-	  document.getElementById("distance-feedback").innerHTML += '<br><a href="https://www.cachesleuth.com/intersection3circles.html">Circle A</a>';
+	  document.getElementById("distance-feedback").innerHTML += '<br>R=1880<br><a href="https://www.cachesleuth.com/intersection3circles.html">Circle A</a>';
 	} else {
 		document.getElementById("distance-feedback").innerHTML = ' ' + dist.toLocaleString(undefined, {maximumFractionDigits: 0}) + ' ';
 	}
